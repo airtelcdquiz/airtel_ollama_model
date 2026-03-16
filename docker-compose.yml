@@ -9,6 +9,8 @@ services:
       - "11434"
     volumes:
       - ollama_data:/root/.ollama
+    networks:
+      - dokploy-network
 
   ollama_proxy:
     image: nginx:alpine
